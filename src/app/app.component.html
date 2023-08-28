@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="nav-height">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="openLeftSide()">menu</mat-icon>
+    </button>
+    <h1>Quản lý sinh viên</h1>
+    <span class="menu-spacer" style="width: 100px;"></span>
+    <div>
+      <a
+        mat-button
+        [routerLink]="['/home']"
+        [routerLinkActive]="'active-link'"
+      >
+        <mat-icon mat-list-icon>home</mat-icon> Bảng điều khiển
+      </a>
+      <a
+        mat-button
+        [routerLink]="['/about']"
+        [routerLinkActive]="'active-link'"
+      >
+        <mat-icon>folder_shared</mat-icon> Học sinh
+      </a>
+      <a
+        mat-button
+        [routerLink]="['/students']"
+        [routerLinkActive]="'active-link'"
+      >
+        <mat-icon>person</mat-icon>Vài nét
+      </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar> 
+<router-outlet></router-outlet>

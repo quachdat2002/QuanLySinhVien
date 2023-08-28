@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <label>
+            Name:
+            <input type="text" formControlName="name" required="">
+        </label>
+        <label>
+            Password:
+            <input type="text" formControlName="password" required="">
+        </label>
+        <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </form>
+</div>
+

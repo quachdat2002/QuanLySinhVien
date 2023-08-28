@@ -1,0 +1,52 @@
+<div class="container">
+    <form class="form" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field >
+            <mat-label>Mã Số Sinh Viên</mat-label>
+            <input matInput type="text" formControlName="code" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Giới Tính</mat-label>
+            <input matInput type="text" formControlName="gender" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Tuổi</mat-label>
+            <input matInput type="text" formControlName="age" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Tên</mat-label>
+            <input matInput type="text" formControlName="firstName" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label>Họ</mat-label>
+            <input matInput type="text" formControlName="lastName" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label>Ngày sinh</mat-label>
+            <input matInput type="text" formControlName="dob" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="email" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label>Điện Thoại</mat-label>
+            <input matInput type="text" formControlName="phone" required="">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Hình Ảnh</mat-label>
+            <input matInput type="text" formControlName="picture" required="">
+        </mat-form-field>
+        <br>
+        <button type="submit" [disabled]="!studentForm.valid" (click)="saveAndGoToList()">Lưu và trở về danh sách</button>
+        &nbsp;
+        <button type="submit" [disabled]="!studentForm.valid" (click)="save()">Lưu <span *ngIf="id === 0">và nhập mới</span></button>
+    </form>
+</div>
